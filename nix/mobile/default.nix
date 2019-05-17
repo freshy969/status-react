@@ -1,11 +1,10 @@
-{ config, stdenv, pkgs, target-os, status-go }:
+{ config, stdenv, callPackage, target-os,
+  gradle, status-go }:
 
-with pkgs;
 with stdenv;
 
 let
-  gradle = gradle_4_10;
-  platform = pkgs.callPackage ../platform.nix { inherit target-os; };
+  platform = callPackage ../platform.nix { inherit target-os; };
   xcodewrapperArgs = {
     version = "10.1";
   };

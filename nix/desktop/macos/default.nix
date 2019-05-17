@@ -1,6 +1,6 @@
-{ stdenv, pkgs, status-go }:
+{ stdenv, callPackage,
+  darwin, qt5, AppKit, Cocoa, CoreFoundation, Foundation, OpenGL, status-go }:
 
-with pkgs;
 with stdenv;
 with darwin.apple_sdk.frameworks;
 

@@ -1,6 +1,6 @@
-{ stdenv, pkgs, target-os, status-go }:
+{ stdenv, callPackage,
+  cmake, extra-cmake-modules, file, target-os, status-go }:
 
-with pkgs;
 with stdenv;
 
 let
